@@ -36,5 +36,6 @@ while True:
     input1 = float(input("Enter the first number: "))
     input2 = float(input("Enter the second number: "))
     operation = input("Enter the operation (+, -, *, /, %, **): ")
+    #function call 
     result = calculator(input1, input2, operation)
     print("Result:", result)
