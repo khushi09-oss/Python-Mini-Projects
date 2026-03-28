@@ -37,3 +37,6 @@ def hangman():
 
     if attempts == 0:
         print(f"Game over! The word was: {word}")
+
+if __name__ == "__main__":
+    hangman()
