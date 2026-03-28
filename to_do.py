@@ -1,4 +1,4 @@
-def add_task(tasks):
+def save_task(tasks):
     with open("todos.txt", "w") as f:
         for task in tasks:
             f.write(f"{task['name']},{task['status']}\n")
@@ -17,7 +17,7 @@ def load_tasks():
 def add_task(tasks):
     name = input("Enter task name: ")
     tasks.append({"name": name, "status": "pending"})
-    add_task(tasks)
+    save_task(tasks)
     print("Task added.")
 
 def view_tasks(tasks):
@@ -31,13 +31,13 @@ def mark_task_completed(tasks):
     view_tasks(tasks)
     num = int(input("Mark which task as done?"))
     tasks[num-1]["status"] = "completed"
-    add_task(tasks)
+    save_task(tasks)
 
 def delete_task(tasks):
     view_tasks(tasks)
     num = int(input("Delete which task?"))
     del tasks[num-1]
-    add_task(tasks)
+    save_task(tasks)
 
 tasks=load_tasks()
 while True:
